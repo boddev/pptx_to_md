@@ -1,12 +1,36 @@
 # PowerPoint to Markdown Converter
 
-A Python script that converts PowerPoint presentations (.pptx) to Markdown (.md) format, preserving text formatting, tables, and bullet points.
+A Python scr### Specify Output File
+```bash
+python pptx_to_md.py presentation.pptx output.md
+```
+
+### Batch Processing
+Convert multiple PowerPoint presentations at once:
+
+```bash
+# Convert all .pptx files in a folder (outputs to same folder)
+python batch_convert.py "path/to/presentations"
+
+# Convert with custom output folder
+python batch_convert.py "input_folder" "output_folder"
+
+# Windows batch script (auto-activates virtual environment)
+batch_convert.bat "C:\My Presentations"
+```
+
+The batch converter will:
+- Find all .pptx files in the specified folder (including subdirectories)
+- Convert each presentation using the same features as the single-file converter
+- Provide a summary of successful and failed conversions
+- Show processing time and detailed error messages if any conversion failsthat converts PowerPoint presentations (.pptx) to Markdown (.md) format, preserving text formatting, tables, and bullet points.
 
 ## Features
 
 - Extracts text from all slides in a PowerPoint presentation
 - **Automatically generates table of contents** with clickable links to each slide
 - **Formats Python interpreter examples** as proper code blocks with syntax highlighting
+- **Batch processing** support for converting multiple presentations at once
 - Preserves bullet point formatting and indentation
 - Converts tables to Markdown table format
 - Organizes content by slide number with anchor links
